@@ -1,154 +1,118 @@
-# EcoTrack
+# 🌱 EcoTrack
 
-Projeto front-end simples para demonstrar uma interface de acompanhamento de impacto ambiental.
+> Uma interface simples, rápida e consciente para acompanhar o seu impacto ambiental.
 
-Como usar
+O **EcoTrack** é um projeto front-end desenvolvido para transformar métricas de impacto ecológico em visualizações simples e acessíveis. O objetivo principal é oferecer uma experiência fluida, leve e intuitiva — demonstrando boas práticas de desenvolvimento web moderno, acessibilidade e performance.
 
-- Abra `index.html` em um navegador moderno.
-- Para rodar os testes básicos (Node.js v14+):
+---
+
+## ✨ O que este projeto traz de bom?
+
+* 📱 **100% Responsivo & Acessível:** Funciona bem em qualquer tela e prioriza a navegação por teclado e leitores de tela.
+* ⚡ **Modo PWA (Offline First):** Graças ao Service Worker e Manifest, você pode instalar e usar a aplicação mesmo sem conexão.
+* 🛠️ **Código Limpo & Testado:** Lógica isolada em `app.js` com testes unitários automáticos e padrões de código garantidos via ESLint e Prettier.
+* 🔄 **CI/CD Integrado:** Workflows automatizados no GitHub Actions para garantir qualidade a cada alteração.
+* 🖼️ **Otimização de Mídias:** Scripts prontos para conversão e geração de imagens responsivas (`WebP`/`srcset`).
+
+---
+
+## 🚀 Como rodar na sua máquina
+
+Quer testar localmente? É bem simples!
+
+### 1. Visualização direta
+Basta abrir o arquivo `index.html` no seu navegador de preferência.
+
+### 2. Rodando os testes
+Se quiser verificar se está tudo funcionando como esperado (requer **Node.js v14+**):
 
 ```bash
 npm run test
-```
+📸 Otimizando Imagens e Performance
+Para manter o site super leve, utilizamos o sharp para converter e redimensionar imagens automaticamente.
 
-Melhorias adicionadas
+Instale as dependências de desenvolvimento:
 
-- Responsividade (media queries) e foco acessível no `styles.css`.
-- Código refatorado em `app.js` com lógica pura exportada para testes.
-- Testes simples em `test/test.js`.
-- Configurações iniciais de `eslint` e `prettier`.
-- Suporte PWA: `manifest.json` e `service-worker.js` para modo offline.
-- Workflow de CI: `.github/workflows/ci.yml` executa lint e testes.
-
-Converter e otimizar imagens
-
-1. Instale `sharp` (recomendado globalmente ou no projeto):
-
-```bash
+Bash
 npm install --save-dev sharp
-```
+Adicione suas imagens originais na pasta assets/ (ex.: assets/illustration.svg).
 
-2. Coloque imagens em `assets/` (ex.: `assets/illustration.svg`).
+Gere as versões otimizadas:
 
-3. Rode o script para gerar `webp`/`png` otimizados:
-
-```bash
+Bash
+# Gera versões leves em WebP e PNG
 npm run images
-```
 
-4. Para gerar múltiplos tamanhos (320/640/1280) e atualizar `srcset` automaticamente no HTML:
-
-```bash
+# Gera múltiplos tamanhos (320px, 640px, 1280px) com suporte a srcset
 npm run images:responsive
-```
+💡 O script cria automaticamente os arquivos responsivos (assets/nome-320.webp, assets/nome-640.webp, assets/nome-1280.webp) e atualiza as tags no index.html.
 
-Isso cria arquivos `assets/nome-320.webp`, `assets/nome-640.webp`, `assets/nome-1280.webp` e atualiza `index.html` com atributos `srcset` e `sizes`.
+☁️ Publicando o Projeto (Deploy)
+O EcoTrack está pronto para ser publicado em questão de minutos. Escolha a plataforma que preferir:
 
-O script `scripts/convert-images.js` converte arquivos `.svg`, `.png`, `.jpg` em `assets/` para `webp` e `png` otimizados e deixa os arquivos prontos para uso em `<picture>`/`srcset`.
+Vá em Settings → Pages no seu repositório do GitHub.
 
-## Deploy
+Em Source, selecione Deploy from a branch.
 
-O EcoTrack está configurado para deploy automático em 3 plataformas principais. Escolha a que preferir:
+Escolha a branch main (ou master) e a pasta / (root).
 
-### 🚀 Opção 1: GitHub Pages (Gratuito, nativo do GitHub)
+Clique em Save.
 
-1. **Ative GitHub Pages no repositório:**
-   - Vá para Settings → Pages
-   - Selecione "Deploy from a branch"
-   - Branch: `main` (ou `master`)
-   - Pasta: `/ (root)`
-   - Salve
+Deploy Automático: A cada novo push na branch principal, o workflow .github/workflows/deploy.yml fará o teste e o deploy automático em https://seu-usuario.github.io/ecotrack.
 
-2. **O workflow de deploy vai rodar automaticamente:**
-   - A cada push em `main`, o workflow `.github/workflows/deploy.yml` executa
-   - Valida testes e lint
-   - Faz deploy automático para `https://seu-usuario.github.io/ecotrack`
+Deploy Manual:
 
-3. **Ou faça deploy manual:**
-   ```bash
-   npm run predeploy
-   git push origin main
-   ```
-
-**URL final:** `https://seu-usuario.github.io/ecotrack`
-
----
-
-### 🌐 Opção 2: Netlify (Fácil, com previews de PRs)
-
-1. **Conecte seu repositório:**
-   - Acesse [netlify.com](https://netlify.com)
-   - Clique "Add new site" → "Import an existing project"
-   - Selecione seu repositório GitHub
-   - Branch: `main`
-   - Build command: deixe vazio (projeto estático)
-   - Publish directory: `.`
-
-2. **Netlify detectará o arquivo `netlify.toml` automaticamente**
-
-3. **Pronto!** Seu site sai do ar em poucos segundos
-   - URL: `https://seu-site.netlify.app`
-   - Previews automáticos para PRs
-
----
-
-### ⚡ Opção 3: Vercel (Rápido, performance otimizada)
-
-1. **Conecte seu repositório:**
-   - Acesse [vercel.com](https://vercel.com)
-   - Clique "Add New..." → "Project"
-   - Selecione seu repositório GitHub
-   - Vercel detectará o `vercel.json` automaticamente
-
-2. **Configure (opcional):**
-   - Environment: Production
-   - Branch: main
-
-3. **Deploy:**
-   - Clique "Deploy"
-   - URL: `https://seu-projeto.vercel.app`
-
----
-
-### 📋 Pré-Deploy Checklist
-
-Antes de fazer deploy, execute:
-
-```bash
+Bash
 npm run predeploy
-```
+git push origin main
+Entre no netlify.com e selecione Add new site → Import an existing project.
 
-Isso roda:
-1. ✅ Testes unitários (`npm test`)
-2. ✅ Linter de código (`npm run lint`)
-3. ✅ Validação de recursos críticos (PWA, accessibility, etc)
+Conecte com seu GitHub e selecione este repositório.
 
----
+Como o projeto é estático, deixe o campo Build command em branco e o Publish directory como ..
 
-### 🔄 Entrega Contínua (CI/CD)
+O Netlify lerá a configuração do arquivo netlify.toml automaticamente e disponibilizará o site em https://seu-site.netlify.app.
 
-O projeto inclui 3 workflows automáticos:
+Acesse o painel da vercel.com e clique em Add New... → Project.
 
-- **`.github/workflows/ci.yml`** - Lint + testes em cada push
-- **`.github/workflows/deploy.yml`** - Deploy automático em GitHub Pages
-- **`.github/workflows/images-optimize.yml`** - Otimiza imagens para release
+Importe o repositório. O arquivo vercel.json será detectado sozinho.
 
----
+Clique em Deploy e seu site estará no ar em https://seu-projeto.vercel.app.
 
-### 📱 Checklist Pós-Deploy
+⚙️ Entrega Contínua (CI/CD)
+O projeto conta com 3 workflows automáticos do GitHub Actions:
 
-Após deploy, verifique:
+.github/workflows/ci.yml - Executa lint e testes em cada push.
 
-- [ ] Site carrega corretamente em desktop e mobile
-- [ ] Service worker está registrado (veja em DevTools → Application → Service Workers)
-- [ ] Modo offline funciona (desative internet e recarregue)
-- [ ] Tema escuro ativa corretamente
-- [ ] Calculadora simula impactos sem erros
-- [ ] Meta tags e SEO estão corretos
+.github/workflows/deploy.yml - Realiza o deploy automático no GitHub Pages.
 
-Teste com:
-```bash
+.github/workflows/images-optimize.yml - Otimiza as imagens para release.
+
+🧪 Checklist antes e depois do Deploy
+📋 Antes de enviar o código (Pre-Deploy)
+Execute o comando abaixo para garantir que nada quebrará em produção:
+
+Bash
+npm run predeploy
+Isso roda os testes unitários (npm test), valida o estilo do código (npm run lint) e checa recursos críticos (PWA, acessibilidade, etc).
+
+📱 Checklist de verificação rápida (Pós-Deploy)
+Após subir o site, vale a pena dar uma conferida nestes pontos:
+
+[ ] Site carrega corretamente em desktop e mobile
+
+[ ] Service worker está registrado (DevTools → Application → Service Workers)
+
+[ ] Modo offline funciona ao desligar a conexão
+
+[ ] Tema escuro ativa corretamente
+
+[ ] Calculadora simula impactos sem erros
+
+[ ] Meta tags e SEO estão corretos
+
+Para testar o servidor local idêntico ao de produção:
+
+Bash
 npm start
-# Abra em http://localhost:8000
-```
-
+# Acesse em http://localhost:8000
