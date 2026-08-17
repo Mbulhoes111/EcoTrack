@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-label="EcoTrack dashboard illustration">
+  <rect width="640" height="420" rx="28" fill="#eaf8ef"/>
+  <rect x="64" y="72" width="512" height="276" rx="24" fill="#ffffff" stroke="#dbeee0" stroke-width="2"/>
+  <rect x="96" y="112" width="180" height="24" rx="12" fill="#2d8f5c"/>
+  <rect x="96" y="154" width="120" height="12" rx="6" fill="#9ed8b3"/>
+  <rect x="96" y="182" width="160" height="12" rx="6" fill="#cfead6"/>
+  <rect x="340" y="112" width="180" height="120" rx="18" fill="#f4fcf6" stroke="#dbeee0"/>
+  <path d="M364 208C388 160 418 136 448 136C478 136 500 156 520 194" stroke="#2d8f5c" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="372" cy="208" r="10" fill="#2d8f5c"/>
+  <circle cx="520" cy="194" r="10" fill="#2d8f5c"/>
+  <rect x="96" y="238" width="220" height="74" rx="18" fill="#f4fcf6" stroke="#dbeee0"/>
+  <rect x="340" y="254" width="180" height="58" rx="18" fill="#2d8f5c"/>
+  <circle cx="136" cy="275" r="24" fill="#77ce98"/>
+  <path d="M120 275h32" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M136 259v32" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+</svg>

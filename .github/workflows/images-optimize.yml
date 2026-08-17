@@ -1,0 +1,60 @@
+name: Generate responsive images
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'assets/**'
+      - 'scripts/**'
+      - 'package.json'
+      - '.github/workflows/images-optimize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-publish:
+    name: Generate responsive images and publish artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate responsive images
+        run: npm run images:responsive
+
+      - name: Upload artifacts to release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            assets/**/*.webp
+            assets/**/*.png
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish assets to dedicated branch
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B build/assets
+          git add assets/*.webp assets/*-[0-9]*.png || true
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore(images): publish responsive assets [skip ci]" || true
+            git push origin build/assets --force
+          else
+            echo "No changes to publish"
+          fi
