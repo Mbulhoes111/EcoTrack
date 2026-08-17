@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#eaf8ef" />
+  <g transform="translate(100,100)">
+    <circle cx="100" cy="100" r="80" fill="#2d8f5c" />
+    <rect x="220" y="60" width="260" height="120" rx="24" fill="#77ce98" />
+    <text x="40" y="220" font-family="Inter, sans-serif" font-size="28" fill="#163423">Ilustração EcoTrack</text>
+  </g>
+</svg>

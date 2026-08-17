@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EcoTrack é uma experiência de acompanhamento de impacto sustentável em formato de produto digital." />
+    <meta name="theme-color" content="#2d8f5c" />
+    <title>EcoTrack | Monitoramento sustentável</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" role="main">
+    <header class="hero">
+      <nav class="topbar" aria-label="Navegação principal">
+        <div class="brand">
+          <span class="brand__icon" aria-hidden="true">🌿</span>
+          <span>EcoTrack</span>
+        </div>
+        <div class="topbar__actions">
+          <a href="#funcionalidades" class="topbar__link">Recursos</a>
+          <a href="#modelo" class="topbar__link">Modelo</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema">☀️</button>
+          <a href="#calculadora" class="topbar__cta">Começar agora</a>
+        </div>
+      </nav>
+
+      <div class="hero__content">
+        <div>
+          <p class="eyebrow">Aplicativo de sustentabilidade</p>
+          <h1>Transforme pequenas decisões em um impacto mensurável.</h1>
+          <p class="hero__text">
+            O EcoTrack ajuda você a acompanhar deslocamentos, alimentação, energia e
+            metas semanais com clareza, motivação e uma experiência mais próxima de um produto real.
+          </p>
+          <div class="hero__actions">
+            <a href="#calculadora" class="btn btn--primary">Calcular impacto</a>
+            <a href="#funcionalidades" class="btn btn--secondary">Ver recursos</a>
+          </div>
+          <ul class="hero__highlights" aria-label="Benefícios principais">
+            <li>✅ Metas semanais personalizadas</li>
+            <li>✅ Relatórios simples e claros</li>
+            <li>✅ Conteúdo voltado para rotina</li>
+          </ul>
+        </div>
+
+        <div class="hero__card" aria-label="Resumo semanal">
+          <picture class="hero__illustration">
+            <source srcset="assets/hero-illustration.svg" type="image/svg+xml" />
+            <img src="assets/hero-illustration.svg" alt="Ilustração do painel EcoTrack" loading="lazy" width="320" height="200" />
+          </picture>
+          <h2>Hoje</h2>
+          <div class="hero__stat">
+            <strong>14,2 kg</strong>
+            <span>CO₂e por semana</span>
+          </div>
+          <div class="hero__stat">
+            <strong>3/5</strong>
+            <span>metas concluídas</span>
+          </div>
+          <div class="hero__progress" aria-label="Progresso da semana">
+            <div class="hero__progress-bar"></div>
+          </div>
+          <p>Você está a caminho de um mês mais verde.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section how-it-works" aria-label="Como funciona o EcoTrack">
+      <div class="section__heading">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Do hábito ao impacto em poucos passos.</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-card__number">1</span>
+          <h3>Cadastre seus hábitos</h3>
+          <p>Registre transporte, alimentação e energia para criar uma base real de acompanhamento.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-card__number">2</span>
+          <h3>Receba orientação</h3>
+          <p>O app sugere pequenas ações e lembretes personalizados conforme seu contexto e rotina.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-card__number">3</span>
+          <h3>Acompanhe resultados</h3>
+          <p>Veja sua evolução em gráficos, metas e desafios com uma experiência mais próxima de um app real.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section trust-section" aria-label="Prova social do EcoTrack">
+      <div class="trust-grid">
+        <article class="trust-card trust-card--highlight">
+          <p class="eyebrow">Confiança</p>
+          <h3>+12 mil usuários ativos</h3>
+          <p>Uma comunidade crescente que já usa o EcoTrack para transformar pequenos hábitos em resultados reais.</p>
+        </article>
+        <article class="trust-card">
+          <p class="eyebrow">Impacto</p>
+          <h3>18% de redução média na pegada</h3>
+          <p>Os usuários relatam queda no consumo de transporte e energia após 30 dias de uso.</p>
+        </article>
+        <article class="trust-card">
+          <p class="eyebrow">Depoimento</p>
+          <h3>“O app me fez enxergar meu impacto com clareza.”</h3>
+          <p>— Ana, usuária Premium</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="app-preview" aria-label="Pré-visualização do aplicativo">
+      <div class="app-preview__copy">
+        <p class="eyebrow">Experiência de produto</p>
+        <h2>Uma interface clara para transformar hábitos em rotina diária.</h2>
+        <p>
+          O EcoTrack une acompanhamento, metas, comunidade e orientação inteligente em uma experiência visual simples,
+          intuitiva e preparada para crescer com o usuário.
+        </p>
+        <div class="preview-pills">
+          <span>Dashboard</span>
+          <span>Metas</span>
+          <span>Comunidade</span>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone__screen">
+          <div class="phone__header">
+            <span id="phone-greeting">EcoTrack</span>
+            <span class="phone__status">Online</span>
+          </div>
+
+          <div class="phone__tabs">
+            <button class="tab is-active" data-target="tab-welcome" type="button">Boas-vindas</button>
+            <button class="tab" data-target="tab-dashboard" type="button">Painel</button>
+            <button class="tab" data-target="tab-goals" type="button">Metas</button>
+            <button class="tab" data-target="tab-community" type="button">Comunidade</button>
+          </div>
+
+          <div id="tab-welcome" class="screen-card is-visible">
+            <div class="screen-card__row">
+              <strong>Bem-vindo</strong>
+              <span>🌿</span>
+            </div>
+            <p>Seu perfil está sendo preparado com metas, lembretes e dicas personalizadas.</p>
+            <p>Complete o cadastro para começar a jornada.</p>
+          </div>
+
+          <div id="tab-dashboard" class="screen-card">
+            <div class="screen-card__row">
+              <strong>Impacto mensal</strong>
+              <span>−12%</span>
+            </div>
+            <div class="screen-card__bar"><div class="screen-card__fill"></div></div>
+            <div class="screen-card__row">
+              <span>Transporte</span>
+              <strong>3/5</strong>
+            </div>
+          </div>
+
+          <div id="tab-goals" class="screen-card">
+            <div class="screen-card__row">
+              <strong>Meta da semana</strong>
+              <span>3/4</span>
+            </div>
+            <p>Usar transporte público 3 vezes.</p>
+            <p>Reduça 1 refeição com carne.</p>
+          </div>
+
+          <div id="tab-community" class="screen-card">
+            <div class="screen-card__row">
+              <strong>Desafio coletivo</strong>
+              <span>+120</span>
+            </div>
+            <p>Mutirão de reciclagem esta semana.</p>
+            <p>Você ganhou 80 pontos por participar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section value-section" id="modelo" aria-label="Proposta de valor do EcoTrack">
+      <div class="section__heading">
+        <p class="eyebrow">Proposta de valor</p>
+        <h2>Uma plataforma que conecta comportamento, dados e impacto real de forma simples.</h2>
+      </div>
+
+      <div class="value-grid">
+        <article class="value-card">
+          <h3>Para o usuário</h3>
+          <p>Transforma hábitos cotidianos em decisões simples, visíveis e motivadoras com metas, alertas e acompanhamento claro.</p>
+        </article>
+        <article class="value-card value-card--accent">
+          <h3>Para a comunidade</h3>
+          <p>Cria conexão local por meio de desafios, pontos de coleta e eventos que fortalecem a ação coletiva.</p>
+        </article>
+        <article class="value-card">
+          <h3>Para o negócio</h3>
+          <p>Oferece um modelo sustentável com assinaturas premium, parcerias e um marketplace verde alinhado com propósito.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pitch-block" aria-label="Problema e solução do EcoTrack">
+      <div class="pitch-block__card">
+        <div class="section__heading">
+          <p class="eyebrow">Problema</p>
+          <h2>Muitas pessoas querem agir de forma mais sustentável, mas não sabem por onde começar.</h2>
+        </div>
+        <p>Há falta de orientação prática, acompanhamento claro e incentivos contínuos para transformar intenção em hábito.</p>
+      </div>
+      <div class="pitch-block__card pitch-block__card--accent">
+        <div class="section__heading">
+          <p class="eyebrow">Solução</p>
+          <h2>Um app que guia hábitos, mede impacto e conecta a pessoa com uma comunidade motivadora.</h2>
+        </div>
+        <p>O EcoTrack transforma rotina em ação com metas, insights, desafios e uma experiência simples e visual.</p>
+      </div>
+    </section>
+
+    <section class="section impact-section" aria-label="Resumo do impacto">
+      <div class="impact-card">
+        <p class="eyebrow">Impacto em números</p>
+        <h2>Pequenas ações geram diferença real.</h2>
+        <p>Ao combinar dados simples, metas e acompanhamento, o EcoTrack transforma rotina em rotina mais sustentável.</p>
+      </div>
+      <div class="impact-stats" aria-label="Métricas de impacto">
+        <div class="metric-pill"><strong>−18%</strong><span>pegada mensal</span></div>
+        <div class="metric-pill"><strong>+12%</strong><span>engajamento</span></div>
+        <div class="metric-pill"><strong>4.8/5</strong><span>satisfação</span></div>
+      </div>
+    </section>
+
+    <section class="section onboarding-section" aria-label="Cadastro do usuário">
+      <div class="onboarding-card">
+        <div class="section__heading">
+          <p class="eyebrow">Fluxo de cadastro</p>
+          <h2>Comece sua jornada em poucos minutos.</h2>
+        </div>
+        <form id="signup-form" class="signup-form">
+          <label>
+            Nome
+            <input id="user-name" type="text" placeholder="Seu nome" required />
+          </label>
+          <label>
+            E-mail
+            <input id="user-email" type="email" placeholder="seu@email.com" required />
+          </label>
+          <label>
+            Meta principal
+            <select id="user-goal">
+              <option value="transporte">Reduzir uso de carro</option>
+              <option value="energia">Diminuir consumo de energia</option>
+              <option value="alimentacao">Adotar hábitos mais sustentáveis</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary">Criar conta</button>
+        </form>
+        <p id="signup-message" class="signup-message">Seu perfil será preparado com metas, lembretes e recomendações personalizadas.</p>
+      </div>
+
+      <div class="onboarding-card onboarding-card--accent">
+        <h3>O que você ganha ao entrar</h3>
+        <ul>
+          <li>Dashboard com evolução do impacto</li>
+          <li>Recomendações personalizadas com IA</li>
+          <li>Comunidade ativa e eventos locais</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section auth-section" aria-label="Login simulado">
+      <div class="onboarding-card">
+        <div class="section__heading">
+          <p class="eyebrow">Acesso</p>
+          <h2>Entre na sua conta EcoTrack.</h2>
+        </div>
+        <form id="login-form" class="signup-form">
+          <label>
+            E-mail
+            <input id="login-email" type="email" placeholder="seu@email.com" required />
+          </label>
+          <label>
+            Senha
+            <input id="login-password" type="password" placeholder="••••••••" required />
+          </label>
+          <button type="submit" class="btn btn--primary">Entrar</button>
+        </form>
+        <p id="login-message" class="signup-message">Acesso simulado para demonstrar o fluxo de autenticação do app.</p>
+      </div>
+
+      <div class="onboarding-card">
+        <h3>Painel após login</h3>
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <strong id="login-score">+240</strong>
+            <span>pontos</span>
+          </div>
+          <div class="mini-stat">
+            <strong>7</strong>
+            <span>desafios ativos</span>
+          </div>
+        </div>
+        <p class="signup-message">A experiência passa a mostrar uma visão mais próxima de um aplicativo real, com telas de entrada e painel personalizado.</p>
+      </div>
+    </section>
+
+    <section class="section dashboard-section" aria-label="Dashboard principal">
+      <div class="dashboard-card dashboard-card--highlight">
+        <div class="section__heading">
+          <p class="eyebrow">Dashboard</p>
+          <h2>Seu painel principal de impacto e metas.</h2>
+        </div>
+        <div class="dashboard-metrics">
+          <div class="metric-pill">
+            <strong>−18%</strong>
+            <span>pegada de carbono</span>
+          </div>
+          <div class="metric-pill">
+            <strong>7/10</strong>
+            <span>metas concluídas</span>
+          </div>
+          <div class="metric-pill">
+            <strong>320</strong>
+            <span>pontos</span>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card__header">
+            <strong>Evolução semanal</strong>
+            <span>+12%</span>
+          </div>
+          <div class="bars bars--vertical" aria-label="Gráfico de progresso semanal">
+            <div class="bar bar--vertical">
+              <div class="bar__track bar__track--vertical"><div class="bar__fill bar__fill--low"></div></div>
+              <span>Seg</span>
+            </div>
+            <div class="bar bar--vertical">
+              <div class="bar__track bar__track--vertical"><div class="bar__fill bar__fill--mid"></div></div>
+              <span>Ter</span>
+            </div>
+            <div class="bar bar--vertical">
+              <div class="bar__track bar__track--vertical"><div class="bar__fill bar__fill--high"></div></div>
+              <span>Qua</span>
+            </div>
+            <div class="bar bar--vertical">
+              <div class="bar__track bar__track--vertical"><div class="bar__fill bar__fill--mid"></div></div>
+              <span>Qui</span>
+            </div>
+            <div class="bar bar--vertical">
+              <div class="bar__track bar__track--vertical"><div class="bar__fill bar__fill--high"></div></div>
+              <span>Sex</span>
+            </div>
+            <div class="bar bar--vertical">
+              <div class="bar__track bar__track--vertical"><div class="bar__fill bar__fill--high"></div></div>
+              <span>Sáb</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="section__heading">
+          <p class="eyebrow">Hoje</p>
+          <h2>Metas diárias e lembretes.</h2>
+        </div>
+        <ul class="task-list">
+          <li>✅ Usar transporte público por 1 hora</li>
+          <li>✅ Levar sacola reutilizável</li>
+          <li>⏳ Desligar aparelhos em standby</li>
+          <li>⏳ Reduzir consumo de carne em 1 refeição</li>
+        </ul>
+        <div class="notification-card">
+          <strong>Notificação inteligente</strong>
+          <p>Você está perto de um ponto de coleta de vidro. Que tal fazer uma parada rápida?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profile-section" aria-label="Perfil do usuário">
+      <div class="profile-card profile-card--main">
+        <div class="profile-avatar">🌿</div>
+        <div>
+          <p class="eyebrow">Perfil</p>
+          <h2 id="profile-name">Usuário EcoTrack</h2>
+          <p class="profile-subtitle">Nível 3 · 68% da meta mensal</p>
+          <div class="profile-badges">
+            <span>🌱 Eco Starter</span>
+            <span>♻️ Reciclador</span>
+            <span>⚡ Energia consciente</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <h3>Conquistas recentes</h3>
+        <ul class="task-list">
+          <li>🏅 Completo 5 metas da semana</li>
+          <li>🌍 Reduziu 12% a pegada de carbono</li>
+          <li>🤝 Participou do desafio de reciclagem</li>
+        </ul>
+      </div>
+
+      <div class="profile-card">
+        <h3>Histórico de atividades</h3>
+        <div class="history-list">
+          <div class="history-item">
+            <strong>Hoje</strong>
+            <span>Usou transporte público</span>
+          </div>
+          <div class="history-item">
+            <strong>Ontem</strong>
+            <span>Desligou aparelhos em standby</span>
+          </div>
+          <div class="history-item">
+            <strong>Há 2 dias</strong>
+            <span>Leu um produto no scanner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section community-section" aria-label="Comunidade EcoTrack">
+      <div class="section__heading">
+        <p class="eyebrow">Comunidade</p>
+        <h2>Compartilhe dicas, conquistas e desafios.</h2>
+      </div>
+
+      <div class="community-grid">
+        <article class="community-card">
+          <div class="community-card__header">
+            <strong>Marina</strong>
+            <span>há 10 min</span>
+          </div>
+          <p>Hoje levei minha sacola de tecido e reduzi o uso de plástico no mercado.</p>
+          <div class="community-card__footer">
+            <span>💡 Dica</span>
+            <span>+24 pontos</span>
+          </div>
+        </article>
+
+        <article class="community-card">
+          <div class="community-card__header">
+            <strong>Desafio coletivo</strong>
+            <span>agora</span>
+          </div>
+          <p>Mutirão de reciclagem esta semana: participe e ganhe recompensas especiais.</p>
+          <div class="community-card__footer">
+            <span>🏁 Missão</span>
+            <span>120 participantes</span>
+          </div>
+        </article>
+
+        <article class="community-card">
+          <div class="community-card__header">
+            <strong>Lucas</strong>
+            <span>há 1h</span>
+          </div>
+          <p>Troquei meu trajeto de carro por bike e senti uma diferença grande no meu impacto.</p>
+          <div class="community-card__footer">
+            <span>🚲 Conquista</span>
+            <span>+40 pontos</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section map-section" aria-label="Mapa colaborativo">
+      <div class="section__heading">
+        <p class="eyebrow">Mapa colaborativo</p>
+        <h2>Encontre pontos de coleta e locais eco-friendly.</h2>
+      </div>
+
+      <div class="map-panel">
+        <div class="map-card">
+          <div class="map-card__header">
+            <strong>Pontos próximos</strong>
+            <span>5 disponíveis</span>
+          </div>
+          <div class="map-marker">
+            <span>♻️</span>
+            <div>
+              <strong>Ponto de coleta de vidro</strong>
+              <p>Rua das Flores, 120</p>
+            </div>
+          </div>
+          <div class="map-marker">
+            <span>🌱</span>
+            <div>
+              <strong>Feira orgânica</strong>
+              <p>Praça Central · Hoje · 8h</p>
+            </div>
+          </div>
+          <div class="map-marker">
+            <span>🛍️</span>
+            <div>
+              <strong>Loja sustentável</strong>
+              <p>Av. Verde, 45</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-visual" aria-label="Mapa ilustrado">
+          <div class="map-visual__pin pin-1">♻️</div>
+          <div class="map-visual__pin pin-2">🌱</div>
+          <div class="map-visual__pin pin-3">🛍️</div>
+          <div class="map-visual__route"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scanner-section" aria-label="Scanner de produtos">
+      <div class="section__heading">
+        <p class="eyebrow">Scanner de produtos</p>
+        <h2>Descubra se um item é sustentável antes de comprar.</h2>
+      </div>
+
+      <div class="scanner-panel">
+        <div class="scanner-card">
+          <div class="scanner-frame">
+            <div class="scanner-line"></div>
+          </div>
+          <button class="btn btn--primary" type="button">Ler código de barras</button>
+          <p class="scanner-hint">Simulação de escaneamento para demonstrar a experiência do app.</p>
+        </div>
+
+        <div class="scanner-card scanner-card--result">
+          <h3>Resultado</h3>
+          <div class="result-badge">✅ Sustentável</div>
+          <p>Produto com embalagem reciclável, ingredientes de origem responsável e certificação verde.</p>
+          <ul>
+            <li>Reciclável: sim</li>
+            <li>Certificação verde: sim</li>
+            <li>Impacto estimado: baixo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section assistant-section" aria-label="Assistente virtual e notificações">
+      <div class="assistant-card">
+        <div class="section__heading">
+          <p class="eyebrow">Assistente virtual</p>
+          <h2>Orientação prática em tempo real.</h2>
+        </div>
+        <div class="assistant-bubble">
+          <strong>EcoBot</strong>
+          <p>“Você anda muito de carro, que tal tentar carona solidária 1 vez por semana?”</p>
+        </div>
+        <div class="assistant-actions">
+          <button class="btn btn--secondary" type="button">Ver dicas</button>
+          <button class="btn btn--primary" type="button">Receber sugestão</button>
+        </div>
+      </div>
+
+      <div class="assistant-card assistant-card--accent">
+        <div class="section__heading">
+          <p class="eyebrow">Notificações inteligentes</p>
+          <h2>Lembretes úteis com base no contexto.</h2>
+        </div>
+        <ul class="task-list">
+          <li>📍 Você está perto de um ponto de coleta de vidro</li>
+          <li>🔔 Lembrete: desligar aparelhos em standby</li>
+          <li>🌤️ Hoje está um dia agradável para usar bike</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section pricing-section" aria-label="Planos e benefícios">
+      <div class="section__heading">
+        <p class="eyebrow">Planos</p>
+        <h2>Escolha o plano ideal para sua jornada sustentável.</h2>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>Gratuito</h3>
+          <p class="price">R$ 0<span>/mês</span></p>
+          <ul>
+            <li>Impacto básico</li>
+            <li>Metas semanais</li>
+            <li>Comunidade aberta</li>
+          </ul>
+          <button class="btn btn--secondary" type="button">Começar</button>
+        </article>
+
+        <article class="pricing-card pricing-card--featured">
+          <h3>Premium</h3>
+          <p class="price">R$ 19<span>/mês</span></p>
+          <ul>
+            <li>Relatórios avançados</li>
+            <li>Previsões de impacto</li>
+            <li>Integrações com dispositivos</li>
+            <li>Benefícios exclusivos</li>
+          </ul>
+          <button class="btn btn--primary" type="button">Assinar</button>
+        </article>
+      </div>
+    </section>
+
+    <main>
+      <section id="funcionalidades" class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Funcionalidades</p>
+          <h2>Uma rotina mais consciente, em poucos passos.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>📊 Calculadora de impacto</h3>
+            <p>Registre transporte, alimentação e energia para ver seu impacto no dia a dia.</p>
+          </article>
+          <article class="card">
+            <h3>🎯 Metas sustentáveis</h3>
+            <p>Defina desafios semanais e acompanhe sua evolução com facilidade.</p>
+          </article>
+          <article class="card">
+            <h3>🏆 Gamificação</h3>
+            <p>Ganhe recompensas, suba no ranking e compartilhe progresso com amigos.</p>
+          </article>
+          <article class="card">
+            <h3>🛒 Sugestões locais</h3>
+            <p>Descubra mercados, restaurantes e serviços eco-friendly perto de você.</p>
+          </article>
+          <article class="card">
+            <h3>🔔 Alertas inteligentes</h3>
+            <p>Receba lembretes úteis para agir de forma simples e sustentável.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculadora" class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Simulador</p>
+          <h2>Descubra seu impacto em minutos.</h2>
+        </div>
+
+        <div class="simulator">
+          <form id="impact-form" class="panel">
+            <label>
+              Transporte
+              <select id="transport" name="transport">
+                <option value="car">Carro</option>
+                <option value="bus">Ônibus</option>
+                <option value="metro">Metrô</option>
+                <option value="bike">Bicicleta</option>
+                <option value="walk">A pé</option>
+              </select>
+            </label>
+
+            <label>
+              Alimentação
+              <select id="diet" name="diet">
+                <option value="omnivore">Onívoro</option>
+                <option value="vegetarian">Vegetariano</option>
+                <option value="vegan">Vegano</option>
+              </select>
+            </label>
+
+            <label>
+              Consumo de energia (kWh/mês)
+              <input id="energy" type="range" min="100" max="1000" step="50" value="350" />
+              <span id="energy-value">350 kWh</span>
+            </label>
+
+            <button type="submit" class="btn btn--primary">Calcular</button>
+          </form>
+
+          <div class="panel result" id="result-panel">
+            <p class="eyebrow">Estimativa mensal</p>
+            <h3 id="impact-total">0,0 kg CO₂e</h3>
+            <p id="impact-message">Seu impacto ainda pode melhorar com pequenas escolhas.</p>
+            <ul>
+              <li>Metas: usar transporte público 3x por semana.</li>
+              <li>Desafio: reduzir 1 refeição com carne por semana.</li>
+              <li>Lembrete: desligar aparelhos em standby.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Motivação</p>
+          <h2>Pequenas ações, grande impacto coletivo.</h2>
+        </div>
+
+        <div class="cards cards--compact">
+          <article class="card">
+            <h3>🌱 Sugestões locais</h3>
+            <p>Mercado orgânico aberto hoje • Café com copo reutilizável • Oficina de reciclagem.</p>
+          </article>
+          <article class="card">
+            <h3>⏰ Alertas</h3>
+            <p>Leve sua sacola reutilizável, desligue o carregador e escolha o transporte mais limpo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Funcionalidades avançadas</p>
+          <h2>Uma plataforma completa para transformar hábitos em impacto real.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>⌚ Integração com dispositivos inteligentes</h3>
+            <p>Conecte smartwatch, apps de saúde e até carros elétricos para acompanhar passos, calorias e deslocamentos.</p>
+          </article>
+          <article class="card">
+            <h3>📷 Scanner de produtos</h3>
+            <p>Leia códigos de barras e verifique se um item é sustentável, reciclável ou possui certificação verde.</p>
+          </article>
+          <article class="card">
+            <h3>🗺️ Mapa colaborativo</h3>
+            <p>Descubra pontos de coleta, locais eco-friendly e espaços de descarte correto próximos a você.</p>
+          </article>
+          <article class="card">
+            <h3>🏁 Desafios comunitários</h3>
+            <p>Participe de missões coletivas e acompanhe metas compartilhadas com a comunidade.</p>
+          </article>
+          <article class="card">
+            <h3>📊 Dashboard e relatórios</h3>
+            <p>Visualize gráficos detalhados do seu impacto e exporte relatórios para estudo ou compartilhamento.</p>
+          </article>
+          <article class="card">
+            <h3>🔌 API aberta</h3>
+            <p>Conecte o EcoTrack a outros serviços e apps para ampliar a experiência e a integração.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Experiência do usuário</p>
+          <h2>Um app minimalista, acolhedor e pensado para o cotidiano sustentável.</h2>
+        </div>
+
+        <div class="simulator">
+          <div class="panel profile-card">
+            <div class="avatar">🌱</div>
+            <div>
+              <h3>Avatar ecológico</h3>
+              <p id="profile-status">Nível 2 • 68% da meta</p>
+              <button id="offline-toggle" class="btn btn--secondary" type="button">Ativar modo offline</button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Modo offline</h3>
+            <p id="offline-message">Você pode registrar atividades sem internet e sincronizar depois.</p>
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <strong>12</strong>
+                <span>atividades salvas</span>
+              </div>
+              <div class="mini-stat">
+                <strong>4</strong>
+                <span>metas pendentes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Conexão social</p>
+          <h2>Comunidade, ranking e eventos que fortalecem o engajamento.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>💬 Comunidade interna</h3>
+            <p>Troque dicas, conquistas e desafios com outros usuários e inspire-se nas boas práticas.</p>
+          </article>
+          <article class="card">
+            <h3>📅 Eventos locais</h3>
+            <p>Acompanhe feiras, mutirões de limpeza e palestras sobre sustentabilidade na sua região.</p>
+          </article>
+          <article class="card">
+            <h3>🏆 Ranking entre amigos</h3>
+            <p>Compare progresso, complete metas e receba reconhecimento por hábitos positivos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Inteligência artificial</p>
+          <h2>Orientação prática e previsões para cada passo da jornada.</h2>
+        </div>
+
+        <div class="panel ai-panel">
+          <h3>💡 Sugestões personalizadas</h3>
+          <p>O app aprende com seus hábitos e sugere mudanças simples e eficazes, como reduzir o uso de carro ou adotar refeições mais sustentáveis.</p>
+          <h3>🔮 Previsão de impacto</h3>
+          <p>Simule como pequenas ações podem reduzir sua pegada de carbono ao longo de meses e anos.</p>
+          <h3>🤖 Assistente virtual</h3>
+          <p>Responda dúvidas rápidas sobre reciclagem, consumo consciente e melhores práticas para o dia a dia.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Monetização sustentável</p>
+          <h2>Uma economia alinhada com propósito e impacto social.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>🛍️ Marketplace verde</h3>
+            <p>Vitrine de produtos ecológicos, com parte da receita revertida para projetos ambientais.</p>
+          </article>
+          <article class="card">
+            <h3>🤝 Parcerias com empresas</h3>
+            <p>Ofereça descontos e recompensas para quem atinge metas sustentáveis e participa de campanhas.</p>
+          </article>
+          <article class="card">
+            <h3>⭐ Plano premium</h3>
+            <p>Tenha relatórios avançados, integração com empresas e benefícios exclusivos para usuários mais engajados.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Confiança e transparência</p>
+          <h2>Segurança, clareza e compromisso com o usuário.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>🔐 Certificados digitais</h3>
+            <p>Mostre que os dados do usuário são protegidos, criptografados e não vendidos.</p>
+          </article>
+          <article class="card">
+            <h3>📊 Relatórios anuais</h3>
+            <p>Publique estatísticas globais do impacto positivo gerado pela comunidade e pelos projetos apoiados.</p>
+          </article>
+          <article class="card">
+            <h3>🧾 Transparência</h3>
+            <p>Explique de forma simples o uso de dados, parcerias e o compromisso do app com a sustentabilidade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Complementos técnicos</p>
+          <h2>Dados, relatórios e integração para crescer com a comunidade.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>📈 Dashboard detalhado</h3>
+            <p>Gráficos mostram evolução do impacto ambiental ao longo do tempo e do progresso das metas.</p>
+            <div class="bars" aria-label="Gráfico de evolução">
+              <div class="bar">
+                <span>Jan</span>
+                <div class="bar__track"><div class="bar__fill bar__fill--low"></div></div>
+              </div>
+              <div class="bar">
+                <span>Fev</span>
+                <div class="bar__track"><div class="bar__fill bar__fill--mid"></div></div>
+              </div>
+              <div class="bar">
+                <span>Mar</span>
+                <div class="bar__track"><div class="bar__fill bar__fill--high"></div></div>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>📤 Exportação de dados</h3>
+            <p>Gere relatórios para compartilhar em redes sociais ou usar em trabalhos acadêmicos.</p>
+          </article>
+          <article class="card">
+            <h3>🔌 API aberta</h3>
+            <p>Permita que outros apps e serviços se conectem ao EcoTrack de forma simples e segura.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Conexão social</p>
+          <h2>Uma comunidade que aprende e cresce junto.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>💬 Comunidade dentro do app</h3>
+            <p>Espaço para compartilhar dicas, conquistas e desafios com outros usuários engajados.</p>
+          </article>
+          <article class="card">
+            <h3>📅 Eventos locais</h3>
+            <p>Calendário de feiras, mutirões de limpeza e palestras sobre sustentabilidade na sua região.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Inteligência artificial</p>
+          <h2>Recomendações inteligentes para cada estágio da jornada.</h2>
+        </div>
+
+        <div class="panel ai-panel">
+          <h3>💡 Sugestão personalizada</h3>
+          <p>“Você anda muito de carro, que tal tentar carona solidária 1 vez por semana?”</p>
+          <h3>🔮 Previsão de impacto</h3>
+          <p>Simule como pequenas mudanças podem reduzir sua pegada de carbono ao longo de meses ou anos.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Monetização sustentável</p>
+          <h2>Uma base econômica alinhada com o propósito ambiental.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>🛍️ Marketplace verde</h3>
+            <p>Vitrine de produtos ecológicos com parte da receita revertida para projetos ambientais.</p>
+          </article>
+          <article class="card">
+            <h3>⭐ Plano premium</h3>
+            <p>Relatórios avançados, integração com empresas e recompensas exclusivas para usuários mais ativos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__heading">
+          <p class="eyebrow">Confiança e transparência</p>
+          <h2>Dados protegidos, impacto visível e compromisso claro.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>🔐 Certificados digitais</h3>
+            <p>Mostre que as informações do usuário são protegidas e nunca vendidas.</p>
+          </article>
+          <article class="card">
+            <h3>📊 Relatórios anuais</h3>
+            <p>Publique estatísticas globais do impacto positivo gerado pela comunidade e pelos projetos apoiados.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Modelo de negócio</p>
+          <h2>Uma proposta sustentável, escalável e com potencial real de impacto.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>💳 Fontes de receita</h3>
+            <p>Plano premium, marketplace verde, parcerias corporativas, publicidade responsável e gamificação com recompensas patrocinadas.</p>
+          </article>
+          <article class="card">
+            <h3>🌱 Proposta de valor</h3>
+            <p>Para usuários, uma forma prática de reduzir o impacto ambiental com recompensas e comunidade; para empresas, uma plataforma de engajamento sustentável.</p>
+          </article>
+          <article class="card">
+            <h3>📉 Estrutura de custos</h3>
+            <p>Desenvolvimento, servidores, IA, marketing, suporte e operação da comunidade.</p>
+          </article>
+          <article class="card">
+            <h3>🚀 Estratégia de crescimento</h3>
+            <p>Comece com versão gratuita, avance para premium e marketplace, depois expanda para parcerias, ONGs e internacionalização.</p>
+          </article>
+          <article class="card">
+            <h3>⭐ Diferenciais competitivos</h3>
+            <p>Transparência total, forte engajamento social, integração com IoT e IA e posicionamento como super app da sustentabilidade.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="section pitch-section" aria-label="Resumo em formato pitch do EcoTrack">
+      <div class="pitch-panel">
+        <div class="section__heading">
+          <p class="eyebrow">Resumo do pitch</p>
+          <h2>Problema, solução e oportunidade em uma narrativa simples.</h2>
+        </div>
+        <div class="pitch-grid">
+          <article class="pitch-card">
+            <strong>Problema</strong>
+            <p>Muitas pessoas querem agir de forma mais sustentável, mas não têm clareza sobre onde começar nem sobre o impacto real de suas escolhas.</p>
+          </article>
+          <article class="pitch-card">
+            <strong>Solução</strong>
+            <p>O EcoTrack transforma hábitos cotidianos em metas, acompanhamento visual e recomendações práticas em um app intuitivo e envolvente.</p>
+          </article>
+          <article class="pitch-card">
+            <strong>Oportunidade</strong>
+            <p>Há espaço para um produto que una propósito, engajamento social e uma economia sustentável com potencial de escala.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <p class="eyebrow">EcoTrack</p>
+        <h2>Pronto para transformar rotina em impacto?</h2>
+        <p class="footer__text">Uma experiência simples, inspiradora e escalável para o futuro da sustentabilidade digital.</p>
+      </div>
+      <div class="footer__actions">
+        <a href="#calculadora" class="btn btn--primary">Experimentar agora</a>
+        <a href="#modelo" class="btn btn--secondary">Ver modelo de negócio</a>
+      </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
